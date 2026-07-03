@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   EMAIL_DISPLAY,
   EMAIL_HREF,
@@ -38,7 +39,13 @@ export function Footer() {
             </a>
           </p>
           <p className="mt-2 text-[12px] text-[#a9bedd]">
-            © 2026 Atlas Iris · Bygget i Aarhus
+            © 2026 Atlas Iris · Bygget i Aarhus ·{" "}
+            <Link
+              href="/privatliv"
+              className="underline decoration-blue-soft underline-offset-4 hover:text-white"
+            >
+              Privatlivspolitik
+            </Link>
           </p>
         </div>
       </div>
