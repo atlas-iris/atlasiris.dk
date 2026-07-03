@@ -1,3 +1,7 @@
+# Atlas Iris — own site (atlasiris.dk)
+
+**Start here: read `REBUILD-BRIEF.md`** — this repo is being rebranded from "Agentic Website" (old, green) to the approved Atlas Iris funnel design in `design-reference/`.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 

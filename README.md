@@ -1,16 +1,18 @@
-# Agentic Website
+# atlasiris.dk
 
-Marketing site for Agentic Website — AI-built websites for local businesses
-without a web presence. Danish-language landing page covering the offer
-(first month free, then ~500 kr/month, no setup fee), the build process, and
-a contact form for leads.
+Atlas Iris' own marketing site — professional websites for local Danish
+businesses, built in days. Danish-language funnel: hero, pain card, results
+strip, bento grid, founders, two paths, FAQ, final CTA. Design follows the
+NTC reference layout wearing the Atlas Iris Brand Book v2 skin (see
+`REBUILD-BRIEF.md` and `design-reference/`).
 
-Live site: https://agentic-website.vercel.app (once deployed)
+Domain: **atlasiris.dk** (DNS switch happens at go-live — manager session).
 
 ## Stack
 
 - **Next.js** (App Router, TypeScript, Tailwind CSS v4)
 - **Vercel** — hosting
+- Self-hosted fonts: Fraunces + Inter variable woff2 in `src/fonts/`
 
 ## Getting started
 
@@ -23,19 +25,20 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Project structure
 
-- `src/app/page.tsx` — the landing page (hero, value props, process, pricing,
-  contact)
-- `src/app/layout.tsx` — root layout, renders `Header` and `Footer`
-- `src/components/ui/` — design-system components (`Button`, `Card`,
-  `Container`, `Section`, `Heading`, `Header`, `Footer`, `ContactForm`)
-- `src/app/globals.css` — brand color tokens (`--primary`, `--secondary`,
-  `--accent`, `--background`, `--foreground`)
+- `src/app/page.tsx` — the entire landing page, section by section
+- `src/app/layout.tsx` — fonts, Danish metadata, JSON-LD, `Header`/`Footer`
+- `src/components/` — `Wordmark`, `Header`, `Footer`
+- `src/lib/site.ts` — contact channel + site constants (phone is the only
+  confirmed channel; add mailto links only once Jonas confirms addresses)
+- `src/app/globals.css` — Atlas Iris color tokens and display-type rules
 
-This repo started from the `client-template` used for client builds, with the
-Supabase wiring removed since this site has no auth/database needs. The
-contact form currently just shows a confirmation message client-side — wire
-it up to a backend or form service when lead volume warrants it.
+## Brand law (do not deviate)
+
+Fraunces never bold · one italic blue word per headline · blue `#2F6BFF`
+only on click targets · Danish copy, no tech jargon. Full rules in
+`REBUILD-BRIEF.md`.
 
 ## Deploying
 
-Connect the repo to Vercel and deploy. No environment variables required.
+Vercel, no environment variables. Do not switch DNS from this repo — go-live
+is handled by the manager session.

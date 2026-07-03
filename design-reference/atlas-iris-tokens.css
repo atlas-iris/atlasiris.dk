@@ -1,0 +1,20 @@
+/* Atlas Iris — color tokens (source: Brand Book v2, slide 05 "Navy leads. Blue points.")
+   This file was referenced by the brand book but missing; created 2026-07-03 from the slide.
+   Rules: Blue = the ONE thing we want clicked (buttons, links, the IRIS).
+   Faint = captions only, never body copy. Blue on white passes contrast at 4.6:1. */
+
+:root {
+  --ai-navy:      #0E2A4E;  /* leads — headlines, primary surfaces */
+  --ai-navy-2:    #13355F;
+  --ai-navy-deep: #081B33;
+  --ai-blue:      #2F6BFF;  /* points — buttons, links, the IRIS. One thing clicked. */
+  --ai-blue-soft: #6E9CFF;
+  --ai-ink:       #1A2433;  /* body text */
+  --ai-muted:     #5E6E84;
+  --ai-faint:     #8595AB;  /* captions ONLY, never body copy */
+  --ai-line:      #E7EDF6;  /* hairlines, card borders */
+  --ai-mist:      #F4F7FC;  /* light section backgrounds */
+
+  --ai-hero-gradient:  linear-gradient(135deg, #081B33 0%, #13355F 100%); /* heroes · covers · bands */
+  --ai-accent-rule:    linear-gradient(90deg, #2F6BFF 0%, #6E9CFF 100%);  /* 2px rules & underlines */
+}
