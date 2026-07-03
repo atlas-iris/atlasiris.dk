@@ -1,4 +1,4 @@
-import { PHONE_HREF } from "@/lib/site";
+import { BOOKING_URL } from "@/lib/site";
 import { Wordmark } from "./wordmark";
 
 export function Header() {
@@ -12,7 +12,9 @@ export function Header() {
           Aarhus · Digitalt Bureau
         </span>
         <a
-          href={PHONE_HREF}
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener"
           className="rounded-full bg-navy px-5 py-2 text-[13.5px] font-semibold text-white transition-colors hover:bg-navy-2"
         >
           Book et opkald

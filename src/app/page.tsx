@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
+import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -11,14 +11,19 @@ function Pill({ children }: { children: React.ReactNode }) {
 
 function CtaButton({
   children,
+  href = BOOKING_URL,
   className = "",
 }: {
   children: React.ReactNode;
+  href?: string;
   className?: string;
 }) {
+  const external = href.startsWith("http");
   return (
     <a
-      href={PHONE_HREF}
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener" : undefined}
       className={`inline-block rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-navy-2 ${className}`}
     >
       {children}
@@ -459,7 +464,7 @@ export default function Home() {
               gang.
             </p>
             <div className="mt-8">
-              <CtaButton className="px-6 py-3 text-[14px]">
+              <CtaButton href={PHONE_HREF} className="px-6 py-3 text-[14px]">
                 Stadig i tvivl? Ring til os
               </CtaButton>
             </div>
