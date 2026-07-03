@@ -1,4 +1,9 @@
-import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
+import {
+  EMAIL_DISPLAY,
+  EMAIL_HREF,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+} from "@/lib/site";
 import { Wordmark } from "./wordmark";
 
 export function Footer() {
@@ -21,6 +26,15 @@ export function Footer() {
               className="font-semibold text-white underline decoration-blue-soft underline-offset-4 hover:decoration-white"
             >
               {PHONE_DISPLAY}
+            </a>
+          </p>
+          <p className="mt-2">
+            Skriv til os:{" "}
+            <a
+              href={EMAIL_HREF}
+              className="font-semibold text-white underline decoration-blue-soft underline-offset-4 hover:decoration-white"
+            >
+              {EMAIL_DISPLAY}
             </a>
           </p>
           <p className="mt-2 text-[12px] text-[#a9bedd]">

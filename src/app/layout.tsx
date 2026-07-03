@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import {
+  EMAIL_DISPLAY,
+  INSTAGRAM_URL,
   PHONE_DISPLAY,
   SITE_DESCRIPTION,
   SITE_NAME,
@@ -61,12 +63,14 @@ const jsonLd = {
   description: SITE_DESCRIPTION,
   url: SITE_URL,
   telephone: PHONE_DISPLAY.replace(/ /g, ""),
+  email: EMAIL_DISPLAY,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Aarhus",
     addressCountry: "DK",
   },
   areaServed: "Aarhus",
+  sameAs: [INSTAGRAM_URL],
 };
 
 export default function RootLayout({

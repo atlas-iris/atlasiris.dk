@@ -100,6 +100,21 @@ const bento = [
   },
 ];
 
+const steps = [
+  {
+    title: "En kort snak",
+    body: "Du booker et opkald, og vi taler om din forretning: hvad du laver, hvem dine kunder er, og hvad siden skal kunne.",
+  },
+  {
+    title: "Din demo, gratis",
+    body: "Få dage senere ser du en demo med dit navn, dine billeder og dine priser. Du betaler først, når du har set den.",
+  },
+  {
+    title: "Live på din adresse",
+    body: "Siger du ja, gør vi den færdig og sætter den live på din egen .dk-adresse. Vi holder den kørende bagefter.",
+  },
+];
+
 const faq = [
   {
     q: "Hvad koster det?",
@@ -445,8 +460,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 6 · Two paths ============ */}
+      {/* ============ 6 · Process ============ */}
       <section className="py-24">
+        <div className="mx-auto max-w-[1100px] px-6">
+          <div data-reveal className="text-center">
+            <Pill>Sådan foregår det</Pill>
+            <h2 className="display mx-auto mt-6 max-w-[14em] text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
+              Så <em>let</em> er det at komme i gang
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+            {steps.map((s, i) => (
+              <div
+                key={s.title}
+                data-reveal
+                style={{ "--rd": `${i * 120}ms` } as React.CSSProperties}
+                className="border-t border-line pt-6"
+              >
+                <p
+                  className="display text-[36px] leading-none"
+                  aria-hidden="true"
+                >
+                  {i + 1}
+                </p>
+                <h3 className="mt-4 text-[16px] font-semibold text-navy">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-[14.5px] leading-[1.6] text-muted">
+                  {s.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 7 · Two paths ============ */}
+      <section className="border-y border-line bg-mist py-24">
         <div className="mx-auto max-w-[1100px] px-6">
           <div data-reveal className="text-center">
             <h2 className="display mx-auto text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
@@ -460,7 +510,7 @@ export default function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div
               data-reveal
-              className="flex flex-col rounded-2xl border border-line bg-mist/60 p-8 sm:p-10"
+              className="flex flex-col rounded-2xl border border-line bg-white p-8 sm:p-10"
             >
               <h3 className="text-[17px] font-semibold text-muted">
                 Gør det selv
@@ -519,8 +569,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 7 · FAQ ============ */}
-      <section className="border-y border-line bg-mist py-24">
+      {/* ============ 8 · FAQ ============ */}
+      <section className="py-24">
         <div className="mx-auto max-w-[760px] px-6">
           <div data-reveal className="text-center">
             <Pill>Inden du beslutter dig</Pill>
@@ -564,7 +614,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ 8 · Final CTA ============ */}
+      {/* ============ 9 · Final CTA ============ */}
       <section className="texture py-28">
         <div data-reveal className="mx-auto max-w-[820px] px-6 text-center">
           <h2 className="display text-[clamp(34px,5.6vw,56px)] leading-[1.06]">

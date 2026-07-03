@@ -1,7 +1,10 @@
-// Confirmed contact channel. Email addresses on the new domain are not
-// confirmed with Jonas yet; add mailto links only once he confirms them.
+// Confirmed contact channels. kontakt@ is the public address per the hub
+// README (2026-07-03, Jonas); admin@ stays private.
 export const PHONE_DISPLAY = "+45 52 77 44 19";
 export const PHONE_HREF = "tel:+4552774419";
+export const EMAIL_DISPLAY = "kontakt@atlasiris.dk";
+export const EMAIL_HREF = "mailto:kontakt@atlasiris.dk";
+export const INSTAGRAM_URL = "https://www.instagram.com/atlasiris.dk";
 
 // Public booking page (Microsoft Bookings, "book with me"). Interim: this is
 // Jonas' personal booking link. Swap to the shared "Atlas Iris" Bookings page
