@@ -27,15 +27,15 @@ function CtaButton({
 }
 
 const pains = [
-  "»Jeg prøvede at bygge den selv — og gav op.«",
+  "»Jeg prøvede at bygge den selv, men gav op.«",
   "»Bureauet ville have alt for mange penge.«",
-  "»Vi har en Facebook-side — er det ikke nok?«",
+  "»Vi har en Facebook-side. Er det ikke nok?«",
   "»Jeg vidste ikke, det kunne gøres hurtigt og billigt.«",
 ];
 
 const bento = [
   {
-    title: "Booking — døgnet rundt",
+    title: "Booking døgnet rundt",
     body: "»Book tid« virker også søndag aften, når kunderne alligevel sidder med telefonen.",
     wide: true,
     icon: (
@@ -46,7 +46,7 @@ const bento = [
     ),
   },
   {
-    title: "Ét tryk — så ringer den",
+    title: "Ét tryk, så ringer den",
     body: "Ring-knappen er altid synlig på mobilen, til de kunder der hellere vil tale med dig.",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -56,7 +56,7 @@ const bento = [
   },
   {
     title: "Priser, man kan se",
-    body: "Synlige priser er det første, nye kunder leder efter — og det største skub til at booke.",
+    body: "Synlige priser er det første, nye kunder leder efter, og det største skub til at booke.",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 5h16M4 10h16M4 15h9M4 20h6" />
@@ -65,7 +65,7 @@ const bento = [
   },
   {
     title: "Hurtig på mobilen",
-    body: "Siden åbner med det samme. De fleste besøg kommer fra en telefon — dér skal den være bedst.",
+    body: "Siden åbner med det samme. De fleste besøg kommer fra en telefon, så dér skal den være bedst.",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M13 2.5 5 13.5h6l-1 8 9-11.5h-6l1-7.5z" />
@@ -74,7 +74,7 @@ const bento = [
   },
   {
     title: "Alt det lovpligtige",
-    body: "Samtykke, privatliv og datasikkerhed er sat rigtigt op fra dag ét — du skal ikke tænke på det.",
+    body: "Samtykke, privatliv og datasikkerhed er sat rigtigt op fra dag ét, så du ikke skal tænke på det.",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3z" />
@@ -87,7 +87,7 @@ const bento = [
 const faq = [
   {
     q: "Hvad koster det?",
-    a: "En fast, overskuelig pris, der passer til en lokal forretning — ingen store engangsregninger. Du får den præcise pris i den første snak, og du betaler først, når du har set din demo.",
+    a: "En fast, overskuelig pris, der passer til en lokal forretning, uden store engangsregninger. Du får den præcise pris i den første snak, og du betaler først, når du har set din demo.",
   },
   {
     q: "Er der binding?",
@@ -95,19 +95,19 @@ const faq = [
   },
   {
     q: "Hvor hurtigt kan min side være klar?",
-    a: "Få dage fra første snak. Du ser en demo først — og når du siger god for den, gør vi den færdig og sætter den live på din egen .dk-adresse.",
+    a: "Få dage fra første snak. Du ser en demo først, og når du siger god for den, gør vi den færdig og sætter den live på din egen .dk-adresse.",
   },
   {
     q: "Kan mine kunder selv booke tid?",
-    a: "Ja — døgnet rundt, også uden for åbningstid. Bruger du allerede en bookingkalender, kobler vi siden sammen med den, du kender.",
+    a: "Ja, døgnet rundt, også uden for åbningstid. Bruger du allerede en bookingkalender, kobler vi siden sammen med den, du kender.",
   },
   {
     q: "Hvad med GDPR og cookies?",
-    a: "Det er sat rigtigt op fra dag ét — samtykke, privatlivspolitik og datasikkerhed. Du skal ikke selv holde styr på reglerne.",
+    a: "Det er sat rigtigt op fra dag ét: samtykke, privatlivspolitik og datasikkerhed. Du skal ikke selv holde styr på reglerne.",
   },
   {
     q: "Hvad hvis jeg ikke kan lide den?",
-    a: "Så betaler du ikke. Demoen er gratis, og vi retter til, indtil den føles rigtig — ellers slutter det dér, helt uden regning.",
+    a: "Så betaler du ikke. Demoen er gratis, og vi retter til, indtil den føles rigtig. Ellers slutter det dér, helt uden regning.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Home() {
           </h1>
           <p className="mx-auto mt-6 max-w-[560px] text-[15.5px] leading-[1.62] text-muted sm:text-[17px]">
             Vi bygger professionelle hjemmesider til lokale danske forretninger
-            på få dage — sider, hvis eneste job er at gøre folk, der finder dig
+            på få dage. Sider, hvis eneste job er at gøre folk, der finder dig
             på Google, til bookede tider. Til en pris, en lokal forretning kan
             betale.
           </p>
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="relative mt-14 aspect-[16/10] overflow-hidden rounded-2xl border border-line sm:aspect-[21/9]">
             <Image
               src="/images/aarhus.jpg"
-              alt="Aarhus set fra oven — her bygger vi"
+              alt="Aarhus set fra oven. Her bygger vi."
               fill
               priority
               sizes="(max-width: 1100px) 100vw, 1052px"
@@ -183,9 +183,9 @@ export default function Home() {
               ))}
             </ul>
             <p className="mt-9 text-center text-[15px] leading-[1.6] text-muted">
-              Imens leder nye kunder på Google —
+              Imens leder nye kunder på Google.
               <br />
-              og finder en anden.
+              Og finder en anden.
             </p>
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function Home() {
               Resultater siger mere end <em>løfter</em>
             </h2>
             <p className="mx-auto mt-5 max-w-[520px] text-[15.5px] leading-[1.62] text-muted">
-              Rigtige forretninger, rigtige sider — bygget på få dage, ikke
+              Rigtige forretninger, rigtige sider. Bygget på få dage, ikke
               måneder.
             </p>
           </div>
@@ -214,7 +214,7 @@ export default function Home() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/princess-beauty.jpg"
-                  alt="Princess Beauty — kursusside med video, forløb og diplom"
+                  alt="Princess Beauty: kursusside med video, forløb og diplom"
                   fill
                   sizes="(max-width: 768px) 100vw, 620px"
                   className="object-cover object-top"
@@ -224,14 +224,14 @@ export default function Home() {
                 <span className="font-semibold text-navy">
                   Princess Beauty · Aarhus
                 </span>{" "}
-                — webshop, kurser og booking samlet på én side
+                samler webshop, kurser og booking på én side
               </figcaption>
             </figure>
             <div className="flex flex-col gap-6 md:col-span-2">
               <div className="flex flex-1 flex-col justify-between rounded-2xl bg-navy p-8 text-white">
                 <p className="display-quote text-[clamp(22px,2.6vw,27px)] leading-[1.25]">
-                  »Én side, der samler det hele — i stedet for fire systemer,
-                  der driller.«
+                  »Én side, der samler det hele. Ikke fire systemer, der
+                  driller.«
                 </p>
                 <p className="eyebrow mt-8 text-[10px] text-[#a9bedd]">
                   Fra arbejdet med Princess Beauty
@@ -242,7 +242,7 @@ export default function Home() {
                   <span className="font-semibold text-navy">
                     Næste i rækken:
                   </span>{" "}
-                  Klinik BeautyLab — og måske din forretning.
+                  Klinik BeautyLab. Og måske din forretning.
                 </p>
               </div>
             </div>
@@ -293,7 +293,7 @@ export default function Home() {
                     Findes på Google
                   </h3>
                   <p className="mt-2 text-[14px] leading-[1.58] text-[#c9d6ec]">
-                    Sat op, så din side og din Google-profil arbejder sammen —
+                    Sat op, så din side og din Google-profil arbejder sammen
                     dér, hvor kunderne leder først.
                   </p>
                 </div>
@@ -314,7 +314,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="mt-3 rounded-lg bg-white/10 px-4 py-2.5 text-[12.5px] text-white">
-                    Din forretning — priser og »book tid« direkte
+                    Din forretning: priser og »book tid« direkte
                   </div>
                 </div>
               </div>
@@ -334,22 +334,22 @@ export default function Home() {
               </h2>
               <p className="mt-6 text-[15.5px] leading-[1.68] text-muted">
                 Atlas Iris er{" "}
-                <span className="font-semibold text-ink">Jonas og Fran</span> —
+                <span className="font-semibold text-ink">Jonas og Fran</span>,
                 to stiftere i Aarhus. Vi kunne se, at mange af byens bedste
                 saloner og små forretninger enten ingen hjemmeside havde, eller
                 havde én, der ikke gav bookinger.
               </p>
               <p className="mt-4 text-[15.5px] leading-[1.68] text-muted">
-                Ikke fordi ejerne er ligeglade — men fordi det har været{" "}
+                Ikke fordi ejerne er ligeglade, men fordi det har været{" "}
                 <span className="font-semibold text-ink">
                   for dyrt, for langsomt og for besværligt
                 </span>
                 . Det laver vi om på: vi bygger hurtigt, taler almindeligt
-                dansk og tager en pris, der passer til en lokal forretning —
+                dansk og tager en pris, der passer til en lokal forretning,
                 ikke til en koncern.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                {["Dage — ikke måneder", "Bygget i Aarhus", "Dansk først"].map(
+                {["Dage, ikke måneder", "Bygget i Aarhus", "Dansk først"].map(
                   (chip) => (
                     <span
                       key={chip}
@@ -385,7 +385,7 @@ export default function Home() {
               To veje. Ét <em>valg</em>.
             </h2>
             <p className="mx-auto mt-5 max-w-[440px] text-[15.5px] leading-[1.62] text-muted">
-              Du kan blive ved med at gøre det på den hårde måde — eller lade
+              Du kan blive ved med at gøre det på den hårde måde, eller lade
               os gøre det let.
             </p>
           </div>
@@ -422,7 +422,7 @@ export default function Home() {
               </h3>
               <ul className="mt-6 flex-1 space-y-3.5">
                 {[
-                  "Gratis demo — med dit navn, dine billeder og dine priser",
+                  "Gratis demo med dit navn, dine billeder og dine priser",
                   "Live på få dage, på din egen .dk-adresse",
                   "Vi holder den kørende: du skriver, vi ordner det",
                 ].map((li) => (
@@ -493,12 +493,12 @@ export default function Home() {
       <section className="texture py-28">
         <div className="mx-auto max-w-[820px] px-6 text-center">
           <h2 className="display text-[clamp(34px,5.6vw,56px)] leading-[1.06]">
-            Klar til at blive fundet&nbsp;—<br />
+            Klar til at blive fundet<br />
             og <em>booket</em>?
           </h2>
           <p className="mx-auto mt-6 max-w-[480px] text-[15.5px] leading-[1.62] text-muted">
             Vi tager en kort snak om din forretning og bygger en gratis demo
-            til dig — så du ser resultatet, før du beslutter dig.
+            til dig, så du ser resultatet, før du beslutter dig.
           </p>
           <div className="mt-9">
             <CtaButton>Book et opkald</CtaButton>

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Atlas Iris tokens — source: Brand Book v2 slide 05 (“Navy leads. Blue points.”)
+/* Atlas Iris tokens. Source: Brand Book v2 slide 05 (“Navy leads. Blue points.”)
    Blue is for the ONE thing we want clicked. Faint is captions only. */
 :root {
   --ai-navy: #0e2a4e;
@@ -55,7 +55,7 @@ body {
   border-radius: 2px;
 }
 
-/* Display type — Fraunces 400, never bold. The one emphasized word per
+/* Display type: Fraunces 400, never bold. The one emphasized word per
    headline is italic + blue (the only sanctioned italic in headlines). */
 .display {
   font-family: var(--font-display);
