@@ -133,3 +133,113 @@ details.faq[open] .chev {
     transition: none;
   }
 }
+
+/* Hero entrance: CSS-only keyframes, so it also plays without JS.
+   Stagger per element via --d. */
+.hero-in {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The hero's emphasized word gets an underline that draws itself once
+   the words have landed. Same blue as the word, per the display-em rule. */
+.hero-title em {
+  position: relative;
+}
+
+.hero-title em::after {
+  content: "";
+  position: absolute;
+  left: 0.03em;
+  right: 0.1em;
+  bottom: 0.02em;
+  height: 0.05em;
+  border-radius: 2px;
+  background: var(--ai-blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: draw 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 1.05s forwards;
+}
+
+@keyframes draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Scroll reveal: elements only hide once an inline script has stamped
+   .anim on <html>, so the page stays fully visible without JS.
+   ScrollReveal adds .revealed as elements enter the viewport; --rd staggers
+   siblings. */
+.anim [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease var(--rd, 0ms),
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) var(--rd, 0ms);
+}
+
+.anim [data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Blinking caret in the Google search demo */
+.demo-caret {
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  margin-left: 3px;
+  border-radius: 1px;
+  background: var(--ai-muted);
+  animation: caret 1.1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* CTA arrow nudges toward the corner on hover */
+.cta-arrow {
+  display: inline-block;
+  margin-left: 0.45em;
+  transition: transform 0.2s ease;
+}
+
+a:hover > .cta-arrow {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-in,
+  .hero-title em::after {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .anim [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .demo-caret {
+    display: none;
+  }
+
+  .cta-arrow {
+    transition: none;
+  }
+}

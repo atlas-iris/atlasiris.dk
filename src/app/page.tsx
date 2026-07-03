@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { GoogleDemo } from "@/components/google-demo";
 import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -27,6 +28,11 @@ function CtaButton({
       className={`inline-block rounded-full bg-navy px-7 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-navy-2 ${className}`}
     >
       {children}
+      {external && (
+        <span className="cta-arrow" aria-hidden="true">
+          ↗
+        </span>
+      )}
     </a>
   );
 }
@@ -122,22 +128,55 @@ export default function Home() {
       {/* ============ 1 · Hero ============ */}
       <section className="texture">
         <div className="mx-auto max-w-[1100px] px-6 pb-16 pt-20 text-center sm:pt-24">
-          <Pill>Hjemmesider til lokale forretninger</Pill>
-          <h1 className="display mx-auto mt-7 max-w-[11em] text-[clamp(44px,8vw,76px)] leading-[1.04]">
-            Bliv fundet.
+          <div className="hero-in">
+            <Pill>Hjemmesider til lokale forretninger</Pill>
+          </div>
+          <h1 className="display hero-title mx-auto mt-7 max-w-[11em] text-[clamp(44px,8vw,76px)] leading-[1.04]">
+            <span
+              className="hero-in inline-block"
+              style={{ "--d": "100ms" } as React.CSSProperties}
+            >
+              Bliv
+            </span>{" "}
+            <span
+              className="hero-in inline-block"
+              style={{ "--d": "190ms" } as React.CSSProperties}
+            >
+              fundet.
+            </span>
             <br />
-            Bliv <em>booket</em>.
+            <span
+              className="hero-in inline-block"
+              style={{ "--d": "280ms" } as React.CSSProperties}
+            >
+              Bliv
+            </span>{" "}
+            <span
+              className="hero-in inline-block"
+              style={{ "--d": "370ms" } as React.CSSProperties}
+            >
+              <em>booket</em>.
+            </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-[560px] text-[15.5px] leading-[1.62] text-muted sm:text-[17px]">
+          <p
+            className="hero-in mx-auto mt-6 max-w-[560px] text-[15.5px] leading-[1.62] text-muted sm:text-[17px]"
+            style={{ "--d": "480ms" } as React.CSSProperties}
+          >
             Vi bygger professionelle hjemmesider til lokale danske forretninger
             på få dage. Sider, hvis eneste job er at gøre folk, der finder dig
             på Google, til bookede tider. Til en pris, en lokal forretning kan
             betale.
           </p>
-          <div className="mt-9">
+          <div
+            className="hero-in mt-9"
+            style={{ "--d": "580ms" } as React.CSSProperties}
+          >
             <CtaButton>Book et opkald</CtaButton>
           </div>
-          <p className="mt-7 text-[13px] font-medium tracking-wide text-muted">
+          <p
+            className="hero-in mt-7 text-[13px] font-medium tracking-wide text-muted"
+            style={{ "--d": "680ms" } as React.CSSProperties}
+          >
             Gratis demo, før du betaler
             <span className="mx-2.5 text-blue" aria-hidden="true">
               •
@@ -148,7 +187,10 @@ export default function Home() {
             </span>
             Ingen binding
           </p>
-          <div className="relative mt-14 aspect-[16/10] overflow-hidden rounded-2xl border border-line sm:aspect-[21/9]">
+          <div
+            className="hero-in relative mt-14 aspect-[16/10] overflow-hidden rounded-2xl border border-line sm:aspect-[21/9]"
+            style={{ "--d": "780ms" } as React.CSSProperties}
+          >
             <Image
               src="/images/aarhus.jpg"
               alt="Aarhus set fra oven. Her bygger vi."
@@ -172,13 +214,21 @@ export default function Home() {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-[1100px] px-6">
-          <div className="mx-auto max-w-[620px] rounded-2xl border border-line bg-white p-9 shadow-[0_24px_60px_-30px_rgba(8,27,51,0.35)] sm:p-12">
+          <div
+            data-reveal
+            className="mx-auto max-w-[620px] rounded-2xl border border-line bg-white p-9 shadow-[0_24px_60px_-30px_rgba(8,27,51,0.35)] sm:p-12"
+          >
             <h2 className="display text-center text-[clamp(28px,4.4vw,40px)] leading-[1.08]">
               Fire ejere. Ét <em>problem</em>.
             </h2>
             <ul className="mt-8 space-y-4">
-              {pains.map((p) => (
-                <li key={p} className="flex gap-3 text-[15px] leading-[1.6]">
+              {pains.map((p, i) => (
+                <li
+                  key={p}
+                  data-reveal
+                  style={{ "--rd": `${150 + i * 90}ms` } as React.CSSProperties}
+                  className="flex gap-3 text-[15px] leading-[1.6]"
+                >
                   <span
                     className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-navy"
                     aria-hidden="true"
@@ -187,7 +237,11 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <p className="mt-9 text-center text-[15px] leading-[1.6] text-muted">
+            <p
+              data-reveal
+              style={{ "--rd": "560ms" } as React.CSSProperties}
+              className="mt-9 text-center text-[15px] leading-[1.6] text-muted"
+            >
               Imens leder nye kunder på Google.
               <br />
               Og finder en anden.
@@ -199,7 +253,7 @@ export default function Home() {
       {/* ============ 3 · Results strip ============ */}
       <section className="border-y border-line bg-mist py-24">
         <div className="mx-auto max-w-[1100px] px-6">
-          <div className="text-center">
+          <div data-reveal className="text-center">
             <Pill>Det bygger vi lige nu</Pill>
             <h2 className="display mx-auto mt-6 max-w-[16em] text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
               Resultater siger mere end <em>løfter</em>
@@ -210,7 +264,10 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-5">
-            <figure className="overflow-hidden rounded-2xl border border-line bg-white md:col-span-3">
+            <figure
+              data-reveal
+              className="overflow-hidden rounded-2xl border border-line bg-white md:col-span-3"
+            >
               <div className="flex items-center gap-1.5 border-b border-line px-4 py-3">
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
@@ -233,7 +290,11 @@ export default function Home() {
               </figcaption>
             </figure>
             <div className="flex flex-col gap-6 md:col-span-2">
-              <div className="flex flex-1 flex-col justify-between rounded-2xl bg-navy p-8 text-white">
+              <div
+                data-reveal
+                style={{ "--rd": "140ms" } as React.CSSProperties}
+                className="flex flex-1 flex-col justify-between rounded-2xl bg-navy p-8 text-white"
+              >
                 <p className="display-quote text-[clamp(22px,2.6vw,27px)] leading-[1.25]">
                   »Én side, der samler det hele. Ikke fire systemer, der
                   driller.«
@@ -242,7 +303,11 @@ export default function Home() {
                   Fra arbejdet med Princess Beauty
                 </p>
               </div>
-              <div className="rounded-2xl border border-line bg-white p-6">
+              <div
+                data-reveal
+                style={{ "--rd": "280ms" } as React.CSSProperties}
+                className="rounded-2xl border border-line bg-white p-6"
+              >
                 <p className="text-[14px] leading-[1.6] text-muted">
                   <span className="font-semibold text-navy">
                     Næste i rækken:
@@ -262,7 +327,7 @@ export default function Home() {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-[1100px] px-6">
-          <div className="text-center">
+          <div data-reveal className="text-center">
             <Pill>Det får du</Pill>
             <h2 className="display mx-auto mt-6 max-w-[15em] text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
               Sådan føles det, når det <em>virker</em>
@@ -273,9 +338,11 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {bento.map((b) => (
+            {bento.map((b, i) => (
               <div
                 key={b.title}
+                data-reveal
+                style={{ "--rd": `${i * 70}ms` } as React.CSSProperties}
                 className={`rounded-2xl border border-line p-7 ${
                   b.wide ? "bg-mist md:col-span-2" : "bg-white"
                 }`}
@@ -291,7 +358,11 @@ export default function Home() {
                 </p>
               </div>
             ))}
-            <div className="rounded-2xl bg-navy p-7 text-white md:col-span-3">
+            <div
+              data-reveal
+              style={{ "--rd": "140ms" } as React.CSSProperties}
+              className="rounded-2xl bg-navy p-7 text-white md:col-span-3"
+            >
               <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
                 <div className="max-w-[380px]">
                   <h3 className="text-[16px] font-semibold">
@@ -302,26 +373,7 @@ export default function Home() {
                     dér, hvor kunderne leder først.
                   </p>
                 </div>
-                <div
-                  className="w-full max-w-[360px] rounded-xl bg-white/10 p-4"
-                  aria-hidden="true"
-                >
-                  <div className="flex items-center gap-3 rounded-full bg-white px-4 py-2.5">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-4 w-4 fill-none stroke-navy stroke-[1.8] [stroke-linecap:round]"
-                    >
-                      <circle cx="11" cy="11" r="6.5" />
-                      <path d="M20.5 20.5 16 16" />
-                    </svg>
-                    <span className="text-[13.5px] text-ink">
-                      frisør aarhus
-                    </span>
-                  </div>
-                  <div className="mt-3 rounded-lg bg-white/10 px-4 py-2.5 text-[12.5px] text-white">
-                    Din forretning: priser og »book tid« direkte
-                  </div>
-                </div>
+                <GoogleDemo />
               </div>
             </div>
           </div>
@@ -332,7 +384,7 @@ export default function Home() {
       <section className="border-y border-line bg-mist py-24">
         <div className="mx-auto max-w-[1100px] px-6">
           <div className="grid items-start gap-12 md:grid-cols-2">
-            <div>
+            <div data-reveal>
               <Pill>Menneskene bag</Pill>
               <h2 className="display mt-6 max-w-[11em] text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
                 Mød dem, der bygger <em>din</em> side
@@ -366,7 +418,11 @@ export default function Home() {
                 )}
               </div>
             </div>
-            <div className="rounded-2xl bg-navy p-9 text-white sm:p-12">
+            <div
+              data-reveal
+              style={{ "--rd": "150ms" } as React.CSSProperties}
+              className="rounded-2xl bg-navy p-9 text-white sm:p-12"
+            >
               <p className="eyebrow text-[10px] text-[#a9bedd]">
                 Hvorfor vi gør det
               </p>
@@ -385,7 +441,7 @@ export default function Home() {
       {/* ============ 6 · Two paths ============ */}
       <section className="py-24">
         <div className="mx-auto max-w-[1100px] px-6">
-          <div className="text-center">
+          <div data-reveal className="text-center">
             <h2 className="display mx-auto text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
               To veje. Ét <em>valg</em>.
             </h2>
@@ -395,7 +451,10 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="flex flex-col rounded-2xl border border-line bg-mist/60 p-8 sm:p-10">
+            <div
+              data-reveal
+              className="flex flex-col rounded-2xl border border-line bg-mist/60 p-8 sm:p-10"
+            >
               <h3 className="text-[17px] font-semibold text-muted">
                 Gør det selv
               </h3>
@@ -421,7 +480,11 @@ export default function Home() {
                 Fortsæt på egen hånd ✕
               </span>
             </div>
-            <div className="flex flex-col rounded-2xl border border-blue-soft/50 bg-[#eaf1ff] p-8 sm:p-10">
+            <div
+              data-reveal
+              style={{ "--rd": "150ms" } as React.CSSProperties}
+              className="flex flex-col rounded-2xl border border-blue-soft/50 bg-[#eaf1ff] p-8 sm:p-10"
+            >
               <h3 className="text-[17px] font-semibold text-navy">
                 Lad Atlas Iris klare det
               </h3>
@@ -443,9 +506,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <CtaButton className="mt-8 self-start">
-                Book et opkald&nbsp;&nbsp;↗
-              </CtaButton>
+              <CtaButton className="mt-8 self-start">Book et opkald</CtaButton>
             </div>
           </div>
         </div>
@@ -454,7 +515,7 @@ export default function Home() {
       {/* ============ 7 · FAQ ============ */}
       <section className="border-y border-line bg-mist py-24">
         <div className="mx-auto max-w-[760px] px-6">
-          <div className="text-center">
+          <div data-reveal className="text-center">
             <Pill>Inden du beslutter dig</Pill>
             <h2 className="display mx-auto mt-6 text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
               Godt at vide, <em>før</em> du siger ja
@@ -470,9 +531,11 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 space-y-3.5">
-            {faq.map((f) => (
+            {faq.map((f, i) => (
               <details
                 key={f.q}
+                data-reveal
+                style={{ "--rd": `${i * 60}ms` } as React.CSSProperties}
                 className="faq rounded-xl border border-line bg-white px-6 py-1"
               >
                 <summary className="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-navy">
@@ -496,7 +559,7 @@ export default function Home() {
 
       {/* ============ 8 · Final CTA ============ */}
       <section className="texture py-28">
-        <div className="mx-auto max-w-[820px] px-6 text-center">
+        <div data-reveal className="mx-auto max-w-[820px] px-6 text-center">
           <h2 className="display text-[clamp(34px,5.6vw,56px)] leading-[1.06]">
             Klar til at blive fundet<br />
             og <em>booket</em>?

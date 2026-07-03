@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import {
   PHONE_DISPLAY,
   SITE_DESCRIPTION,
@@ -77,8 +78,16 @@ export default function RootLayout({
     <html
       lang="da"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col">
+        {/* Stamped before first paint so scroll-reveal never flashes;
+            without JS the class is absent and everything stays visible. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('anim')",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -86,6 +95,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ScrollReveal />
       </body>
     </html>
   );
