@@ -33,6 +33,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* lets block-size transition from 0 to auto (FAQ glide, Chromium) */
+  interpolate-size: allow-keywords;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -210,6 +212,114 @@ details.faq[open] .chev {
   }
 }
 
+/* The Princess Beauty mockup pans down inside its browser frame on hover */
+.site-preview img {
+  object-position: top;
+  transition: object-position 4s cubic-bezier(0.3, 0, 0.4, 1);
+}
+
+.site-preview:hover img {
+  object-position: bottom;
+}
+
+/* Bento icon micro-moves, triggered by hovering the whole card */
+.bento-icon svg {
+  transition: transform 0.25s ease;
+}
+
+.bento-card:hover .icon-tilt svg {
+  transform: translateY(-2px) rotate(-5deg);
+}
+
+.bento-card:hover .icon-ring svg {
+  animation: ring 0.55s ease;
+}
+
+@keyframes ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-13deg);
+  }
+  40% {
+    transform: rotate(11deg);
+  }
+  60% {
+    transform: rotate(-7deg);
+  }
+  80% {
+    transform: rotate(4deg);
+  }
+}
+
+.icon-write svg path {
+  stroke-dasharray: 48;
+}
+
+.bento-card:hover .icon-write svg path {
+  animation: write 0.7s ease;
+}
+
+@keyframes write {
+  from {
+    stroke-dashoffset: 48;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.bento-card:hover .icon-flash svg {
+  animation: flash 0.45s ease;
+}
+
+@keyframes flash {
+  30% {
+    opacity: 0.25;
+    transform: scale(0.94);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+.icon-check svg .check {
+  stroke-dasharray: 9;
+}
+
+.bento-card:hover .icon-check svg .check {
+  animation: write-check 0.5s ease;
+}
+
+@keyframes write-check {
+  from {
+    stroke-dashoffset: 9;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* FAQ answers glide open where ::details-content is supported;
+   elsewhere the rule is ignored and answers simply appear, as before */
+details.faq::details-content {
+  opacity: 0;
+  block-size: 0;
+  overflow: clip;
+  transition:
+    content-visibility 0.3s allow-discrete,
+    opacity 0.3s ease,
+    block-size 0.3s ease;
+}
+
+details.faq[open]::details-content {
+  opacity: 1;
+  block-size: auto;
+}
+
 /* CTA arrow nudges toward the corner on hover */
 .cta-arrow {
   display: inline-block;
@@ -240,6 +350,26 @@ a:hover > .cta-arrow {
   }
 
   .cta-arrow {
+    transition: none;
+  }
+
+  .site-preview img,
+  .bento-icon svg {
+    transition: none;
+  }
+
+  .bento-card:hover .icon-tilt svg {
+    transform: none;
+  }
+
+  .bento-card:hover .icon-ring svg,
+  .bento-card:hover .icon-write svg path,
+  .bento-card:hover .icon-flash svg,
+  .bento-card:hover .icon-check svg .check {
+    animation: none;
+  }
+
+  details.faq::details-content {
     transition: none;
   }
 }

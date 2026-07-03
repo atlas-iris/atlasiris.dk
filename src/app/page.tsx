@@ -49,6 +49,7 @@ const bento = [
     title: "Booking døgnet rundt",
     body: "»Book tid« virker også søndag aften, når kunderne alligevel sidder med telefonen.",
     wide: true,
+    anim: "icon-tilt",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <rect x="3" y="4.5" width="18" height="16" rx="2" />
@@ -59,6 +60,7 @@ const bento = [
   {
     title: "Ét tryk, så ringer den",
     body: "Ring-knappen er altid synlig på mobilen, til de kunder der hellere vil tale med dig.",
+    anim: "icon-ring",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M6.5 3.5h4l1.5 4.5-2.2 1.6a13 13 0 0 0 4.6 4.6l1.6-2.2 4.5 1.5v4a1.8 1.8 0 0 1-2 1.8C10.9 18.6 5.4 13.1 4.7 5.5a1.8 1.8 0 0 1 1.8-2z" />
@@ -68,6 +70,7 @@ const bento = [
   {
     title: "Priser, man kan se",
     body: "Synlige priser er det første, nye kunder leder efter, og det største skub til at booke.",
+    anim: "icon-write",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 5h16M4 10h16M4 15h9M4 20h6" />
@@ -77,6 +80,7 @@ const bento = [
   {
     title: "Hurtig på mobilen",
     body: "Siden åbner med det samme. De fleste besøg kommer fra en telefon, så dér skal den være bedst.",
+    anim: "icon-flash",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M13 2.5 5 13.5h6l-1 8 9-11.5h-6l1-7.5z" />
@@ -86,10 +90,11 @@ const bento = [
   {
     title: "Alt det lovpligtige",
     body: "Samtykke, privatliv og datasikkerhed er sat rigtigt op fra dag ét, så du ikke skal tænke på det.",
+    anim: "icon-check",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3z" />
-        <path d="m9.2 11.8 2 2 3.6-4" />
+        <path className="check" d="m9.2 11.8 2 2 3.6-4" />
       </svg>
     ),
   },
@@ -273,13 +278,13 @@ export default function Home() {
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
               </div>
-              <div className="relative aspect-[4/3]">
+              <div className="site-preview relative aspect-[4/3]">
                 <Image
                   src="/images/princess-beauty.jpg"
                   alt="Princess Beauty: kursusside med video, forløb og diplom"
                   fill
                   sizes="(max-width: 768px) 100vw, 620px"
-                  className="object-cover object-top"
+                  className="object-cover"
                 />
               </div>
               <figcaption className="border-t border-line px-5 py-4 text-[13.5px] text-muted">
@@ -343,11 +348,13 @@ export default function Home() {
                 key={b.title}
                 data-reveal
                 style={{ "--rd": `${i * 70}ms` } as React.CSSProperties}
-                className={`rounded-2xl border border-line p-7 ${
+                className={`bento-card rounded-2xl border border-line p-7 ${
                   b.wide ? "bg-mist md:col-span-2" : "bg-white"
                 }`}
               >
-                <div className="h-7 w-7 text-navy [&_svg]:h-7 [&_svg]:w-7 [&_svg]:fill-none [&_svg]:stroke-current [&_svg]:stroke-[1.5] [&_svg]:[stroke-linecap:round] [&_svg]:[stroke-linejoin:round]">
+                <div
+                  className={`bento-icon ${b.anim} h-7 w-7 text-navy [&_svg]:h-7 [&_svg]:w-7 [&_svg]:fill-none [&_svg]:stroke-current [&_svg]:stroke-[1.5] [&_svg]:[stroke-linecap:round] [&_svg]:[stroke-linejoin:round]`}
+                >
                   {b.icon}
                 </div>
                 <h3 className="mt-5 text-[16px] font-semibold text-navy">
