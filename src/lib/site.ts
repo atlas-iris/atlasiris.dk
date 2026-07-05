@@ -6,11 +6,10 @@ export const EMAIL_DISPLAY = "kontakt@atlasiris.dk";
 export const EMAIL_HREF = "mailto:kontakt@atlasiris.dk";
 export const INSTAGRAM_URL = "https://www.instagram.com/atlasiris.dk";
 
-// Public booking page (Microsoft Bookings, "book with me"). Interim: this is
-// Jonas' personal booking link. Swap to the shared "Atlas Iris" Bookings page
-// once Microsoft lets us create it (creation kept failing 2026-07-03).
+// Public booking page: the shared "Atlas Iris" Microsoft Bookings page
+// (service "Telefonopkald", 15 min, phone number required at booking).
 export const BOOKING_URL =
-  "https://outlook.office.com/bookwithme/user/ff933fa7eb3d4477be8cfd1b9a76125a@atlasiris.dk/meetingtype/PWX_PGNji0K2hpKVvX7ZBg2?anonymous&ismsaljsauthenabled";
+  "https://outlook.office.com/book/AtlasIris@atlasiris.dk/?ismsaljsauthenabled";
 
 export const SITE_URL = "https://atlasiris.dk";
 export const SITE_NAME = "Atlas Iris";
