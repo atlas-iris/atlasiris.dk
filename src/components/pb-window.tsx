@@ -68,6 +68,10 @@ export function PbWindow() {
             sizes="(max-width: 768px) 100vw, 620px"
             className="h-auto w-full"
             priority={page.id === "forside"}
+            /* These are pre-sized full-page captures; skip Next/Vercel image
+               optimization (it was blanking some tabs on the deployed preview
+               and adds nothing for already-right-sized JPEGs). */
+            unoptimized
           />
           {/* Usynlige klikfelter oven på sidens egne links; keyboard-brugere
               navigerer via fanerne, derfor tabIndex -1 */}
