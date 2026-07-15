@@ -1,20 +1,34 @@
-/* Atlas Iris — color tokens (source: Brand Book v2, slide 05 "Navy leads. Blue points.")
-   This file was referenced by the brand book but missing; created 2026-07-03 from the slide.
-   Rules: Blue = the ONE thing we want clicked (buttons, links, the IRIS).
-   Faint = captions only, never body copy. Blue on white passes contrast at 4.6:1. */
+/* Atlas Iris — design tokens (canonical, matches atlas-iris-colors.md)
+   Reworked 2026-07-13: the two accent blues now come straight from the
+   A·I monogram's gradient (#4F8DFF top → #1F5FD8 bottom).
+   Drop this into any project and use the variables below. */
 
 :root {
-  --ai-navy:      #0E2A4E;  /* leads — headlines, primary surfaces */
-  --ai-navy-2:    #13355F;
-  --ai-navy-deep: #081B33;
-  --ai-blue:      #2F6BFF;  /* points — buttons, links, the IRIS. One thing clicked. */
-  --ai-blue-soft: #6E9CFF;
-  --ai-ink:       #1A2433;  /* body text */
-  --ai-muted:     #5E6E84;
-  --ai-faint:     #8595AB;  /* captions ONLY, never body copy */
-  --ai-line:      #E7EDF6;  /* hairlines, card borders */
-  --ai-mist:      #F4F7FC;  /* light section backgrounds */
+  /* Core palette */
+  --navy:      #0E2A4E;  /* primary — heroes, headings on light (the logo's A family) */
+  --navy-2:    #13355F;  /* navy support — midtones, cards on navy */
+  --navy-deep: #081B33;  /* darkest navy — gradient end, footers */
+  --blue:      #1F5FD8;  /* accent — buttons, CTAs, links, icons (logo gradient, deep end) */
+  --blue-soft: #4F8DFF;  /* bright accent — highlights on dark (logo gradient, top) */
+  --ink:       #1A2433;  /* body text on light */
+  --muted:     #5E6E84;  /* secondary text */
+  --faint:     #8595AB;  /* captions, footnotes — never body copy */
+  --line:      #E7EDF6;  /* hairline rules */
+  --line-2:    #EEF3FA;  /* softer rules */
+  --mist:      #F4F7FC;  /* tinted light surface */
+  --paper:     #FFFFFF;
 
-  --ai-hero-gradient:  linear-gradient(135deg, #081B33 0%, #13355F 100%); /* heroes · covers · bands */
-  --ai-accent-rule:    linear-gradient(90deg, #2F6BFF 0%, #6E9CFF 100%);  /* 2px rules & underlines */
+  /* On-navy text */
+  --on-navy:       #FFFFFF;
+  --on-navy-body:  #C9D6EC;
+  --on-navy-label: #A9BEDD;
+
+  /* Gradients */
+  --grad-hero: radial-gradient(120% 130% at 82% -25%, #1A4377 0%, #0E2A4E 50%, #081B33 100%);
+  --grad-rule: linear-gradient(90deg, #1F5FD8, #4F8DFF);       /* 2px rules & underlines */
+  --grad-logo: linear-gradient(180deg, #4F8DFF, #1F5FD8);      /* the monogram's I / label IRIS */
+
+  /* Type (see Fonts/atlas-iris-fonts.md) */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }

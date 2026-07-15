@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   EMAIL_DISPLAY,
@@ -12,6 +13,14 @@ export function Footer() {
     <footer className="bg-navy-deep text-white">
       <div className="mx-auto flex max-w-[1100px] flex-col gap-6 px-6 py-12 sm:flex-row sm:items-baseline sm:justify-between">
         <div>
+          {/* White A·I monogram — the -light master, for navy surfaces */}
+          <Image
+            src="/images/logo-mark-white.png"
+            alt=""
+            width={44}
+            height={44}
+            className="mb-4"
+          />
           <span className="text-[14px]">
             <Wordmark onDark />
           </span>

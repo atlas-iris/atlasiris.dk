@@ -15,7 +15,9 @@ These two agree with each other: the NTC mockup is light-background, navy-text, 
 
 **Color** (tokens: OneDrive `01 Brand & Identity/Colors/atlas-iris-tokens.css`, created from slide 05):
 - Navy `#0E2A4E` leads · Ink `#1A2433` body · Mist `#F4F7FC` light sections · Line `#E7EDF6` hairlines
-- **Blue `#2F6BFF` is for the ONE thing we want clicked** — buttons, links, the IRIS. Don't spray it.
+- **Blue `#1F5FD8` is for the ONE thing we want clicked** — buttons, links, the IRIS. Don't spray it.
+  (2026-07-13 rework: accent blues re-aligned to the A·I monogram gradient — `#2F6BFF`→`#1F5FD8`,
+  `#6E9CFF`→`#4F8DFF`. Navy family + neutrals unchanged.)
 - Faint `#8595AB` captions only, never body copy. Hero gradient (`#081B33→#13355F`) for heroes/bands only — the page itself stays light like the NTC mockup.
 
 **Typography** (slide 06, fonts in `design-reference/fonts/`, self-host — no Google Fonts):
@@ -24,7 +26,7 @@ These two agree with each other: the NTC mockup is light-background, navy-text, 
 - Body/UI: **Inter 400**, 13–16px, line-height 1.55–1.65. Emphasis = weight 600, never italics in running text.
 - Eyebrows/pills: Inter 600, tracked wide — the NTC section-pill pattern.
 
-**Logo** (slide 04): the ATLAS IRIS wordmark IS the logo (`design-reference/logo/atlas-iris-wordmark.svg`). Iris mark only for favicon/avatar. Old "AW" mark is retired — never render it.
+**Logo** (slide 04, since 2026-07-13): the **A·I monogram** is the logo (`design-reference/logo/` — masters + spec). File names describe the logo's own color: `-dark` = navy logo → light backgrounds, `-light` = white logo → navy backgrounds; below ~48px use the icon version. The ATLASIRIS lockup is live text (wordmark component). The concentric-ring iris mark, the wordmark images and the old "AW" mark are ALL retired — never render them.
 
 **Voice** (slides 02+): Danish, direct, zero tech jargon (never "AI", "Astro", "deploy" client-facing), zero hype/superlatives. Lead with the result: found on Google → booked calendar.
 

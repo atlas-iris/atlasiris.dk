@@ -1,6 +1,7 @@
-/* The ATLAS IRIS wordmark is the logo (Brand Book slide 04). Typographic
-   rendering per Fonts/atlas-iris-fonts.md: ATLAS 500 tracked .30em,
-   IRIS 300 italic tracked .20em. Size via className on the parent. */
+/* The typographic ATLASIRIS lockup — live text per Fonts/atlas-iris-fonts.md:
+   ATLAS 500 tracked .30em, IRIS 300 italic tracked .20em. Since 2026-07-13
+   the logo proper is the A·I monogram (design-reference/logo/); this lockup
+   accompanies it. Size via className on the parent. */
 export function Wordmark({ onDark = false }: { onDark?: boolean }) {
   return (
     <span

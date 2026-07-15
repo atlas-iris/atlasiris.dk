@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 /* Atlas Iris tokens. Source: Brand Book v2 slide 05 (“Navy leads. Blue points.”)
-   Blue is for the ONE thing we want clicked. Faint is captions only. */
+   Blue is for the ONE thing we want clicked. Faint is captions only.
+   2026-07-13 brand rework: both accent blues come from the A·I monogram's
+   gradient (#4F8DFF top → #1F5FD8 bottom); navy family + neutrals unchanged. */
 :root {
   --ai-navy: #0e2a4e;
   --ai-navy-2: #13355f;
   --ai-navy-deep: #081b33;
-  --ai-blue: #2f6bff;
-  --ai-blue-soft: #6e9cff;
+  --ai-blue: #1f5fd8;
+  --ai-blue-soft: #4f8dff;
   --ai-ink: #1a2433;
   --ai-muted: #5e6e84;
   --ai-faint: #8595ab;

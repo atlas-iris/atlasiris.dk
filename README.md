@@ -34,8 +34,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Brand law (do not deviate)
 
-Fraunces never bold · one italic blue word per headline · blue `#2F6BFF`
-only on click targets · Danish copy, no tech jargon. Full rules in
+Fraunces never bold · one italic blue word per headline · blue `#1F5FD8`
+only on click targets · Danish copy, no tech jargon. The logo is the A·I
+monogram (since 2026-07-13, masters in `design-reference/logo/`) — anything
+with rings or an eye is the retired mark, never render it. Full rules in
 `REBUILD-BRIEF.md`.
 
 ## Deploying

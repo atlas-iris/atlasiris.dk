@@ -5,6 +5,7 @@ export const PHONE_HREF = "tel:+4552774419";
 export const EMAIL_DISPLAY = "kontakt@atlasiris.dk";
 export const EMAIL_HREF = "mailto:kontakt@atlasiris.dk";
 export const INSTAGRAM_URL = "https://www.instagram.com/atlasiris.dk";
+export const FACEBOOK_URL = "https://www.facebook.com/atlasiris.dk";
 
 // Public booking page: the shared "Atlas Iris" Microsoft Bookings page
 // (service "Telefonopkald", 15 min, phone number required at booking).

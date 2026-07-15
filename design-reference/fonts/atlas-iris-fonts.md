@@ -24,13 +24,20 @@ personality; Inter does the reading work.
 **Local font files:** the variable TTFs (Fraunces roman + italic, Inter) live in
 `files/` with their OFL licenses — no Google Fonts needed for print/offline work.
 
-## The wordmark (typographic — rendered logo files in `../Logo/`)
+## The wordmark (typographic lockup — live text only)
+
+Since 2026-07-13 the **logo** is the A·I monogram (files in `../Logo/`,
+spec in `../Logo/atlas-iris-logo-spec.md`). The ATLASIRIS wordmark below is
+the typographic lockup: set it as live text on the web (CSS below); for print
+and physical items use the ready-made label PNGs
+(`../Logo/atlas-iris-label-dark.png` / `…-light.png`, IRIS in the logo's blue
+gradient) instead of re-rendering it yourself.
 
 `ATLASIRIS` set as one word, uppercase Fraunces:
 
 - **ATLAS** — weight 500, letter-spacing `.30em`
 - **IRIS** — weight 300, *italic*, letter-spacing `.20em`
-- Color: ATLAS in navy `#0E2A4E` (white on dark); IRIS in blue `#2F6BFF` (blue-soft `#6E9CFF` on dark)
+- Color: ATLAS in navy `#0E2A4E` (white on dark); IRIS in blue `#1F5FD8` (blue-soft `#4F8DFF` on dark) — in the label PNGs the IRIS carries the full logo gradient `#4F8DFF → #1F5FD8`
 
 ```html
 <span class="wordmark">ATLAS<span class="i">IRIS</span></span>
