@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { GoogleDemo } from "@/components/google-demo";
+import { PbWindow } from "@/components/pb-window";
 import { BOOKING_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -274,13 +275,13 @@ export default function Home() {
       <section className="border-y border-line bg-mist py-24">
         <div className="mx-auto max-w-[1100px] px-6">
           <div data-reveal className="text-center">
-            <Pill>Det bygger vi lige nu</Pill>
+            <Pill>Bag scenen</Pill>
             <h2 className="display mx-auto mt-6 max-w-[16em] text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
               Resultater siger mere end <em>løfter</em>
             </h2>
             <p className="mx-auto mt-5 max-w-[520px] text-[15.5px] leading-[1.62] text-muted">
-              Rigtige forretninger, rigtige sider. Bygget på få dage, ikke
-              måneder.
+              Rigtige forretninger, rigtige sider. Kig med i vinduet herunder,
+              mens vi bygger.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-5">
@@ -288,25 +289,13 @@ export default function Home() {
               data-reveal
               className="overflow-hidden rounded-2xl border border-line bg-white md:col-span-3"
             >
-              <div className="flex items-center gap-1.5 border-b border-line px-4 py-3">
-                <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                <span className="h-2.5 w-2.5 rounded-full bg-line" />
-                <span className="h-2.5 w-2.5 rounded-full bg-line" />
-              </div>
-              <div className="site-preview relative aspect-[4/3]">
-                <Image
-                  src="/images/princess-beauty.jpg"
-                  alt="Princess Beauty: kursusside med video, forløb og diplom"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 620px"
-                  className="object-cover"
-                />
-              </div>
+              <PbWindow />
               <figcaption className="border-t border-line px-5 py-4 text-[13.5px] text-muted">
                 <span className="font-semibold text-navy">
-                  Princess Beauty · Aarhus
+                  Bag scenen: Princess Beauty · Aarhus
                 </span>{" "}
-                samler webshop, kurser og booking på én side
+                — webshop, kurser og booking på én side. Klik rundt mellem
+                siderne, som var du på besøg
               </figcaption>
             </figure>
             <div className="flex flex-col gap-6 md:col-span-2">

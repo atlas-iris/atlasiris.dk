@@ -214,14 +214,38 @@ details.faq[open] .chev {
   }
 }
 
-/* The Princess Beauty mockup pans down inside its browser frame on hover */
-.site-preview img {
-  object-position: top;
-  transition: object-position 4s cubic-bezier(0.3, 0, 0.4, 1);
+/* Bag scenen-vinduet: besøgende ruller selv Princess Beautys side inde i
+   browserrammen (Shopify tillader ikke iframes, så indholdet er et
+   helsides-billede). Tynd, diskret scrollbar. */
+.site-window {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ai-faint) transparent;
 }
 
-.site-preview:hover img {
-  object-position: bottom;
+.site-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.site-window::-webkit-scrollbar-thumb {
+  background: var(--ai-line);
+  border-radius: 4px;
+}
+
+/* "Rul i vinduet"-hintet fader ud, når man begynder at rulle
+   (scroll-drevet animation; browsere uden støtte beholder hintet) */
+@supports (animation-timeline: scroll()) {
+  .site-window .scroll-hint {
+    animation: hint-fade linear both;
+    animation-timeline: scroll(nearest block);
+    animation-range: 0% 20%;
+  }
+}
+
+@keyframes hint-fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* Bento icon micro-moves, triggered by hovering the whole card */
@@ -355,7 +379,6 @@ a:hover > .cta-arrow {
     transition: none;
   }
 
-  .site-preview img,
   .bento-icon svg {
     transition: none;
   }
