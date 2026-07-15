@@ -274,13 +274,13 @@ export default function Home() {
       <section className="border-y border-line bg-mist py-24">
         <div className="mx-auto max-w-[1100px] px-6">
           <div data-reveal className="text-center">
-            <Pill>Det bygger vi lige nu</Pill>
+            <Pill>Bag scenen</Pill>
             <h2 className="display mx-auto mt-6 max-w-[16em] text-[clamp(30px,4.6vw,44px)] leading-[1.08]">
               Resultater siger mere end <em>løfter</em>
             </h2>
             <p className="mx-auto mt-5 max-w-[520px] text-[15.5px] leading-[1.62] text-muted">
-              Rigtige forretninger, rigtige sider. Bygget på få dage, ikke
-              måneder.
+              Rigtige forretninger, rigtige sider. Kig med i vinduet herunder,
+              mens vi bygger.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-5">
@@ -292,21 +292,38 @@ export default function Home() {
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
                 <span className="h-2.5 w-2.5 rounded-full bg-line" />
+                <span className="ml-3 rounded-full bg-mist px-3 py-0.5 text-[11.5px] text-muted">
+                  princessbeauty.dk
+                </span>
               </div>
-              <div className="site-preview relative aspect-[4/3]">
+              {/* Shopify forbyder iframes (frame-ancestors 'none'), så vinduet
+                  er et rulbart helsides-billede af siden i stedet */}
+              <div
+                className="site-window aspect-[4/3] overflow-y-auto overscroll-contain"
+                tabIndex={0}
+                role="region"
+                aria-label="Kig på Princess Beautys side, rul for at se mere"
+              >
                 <Image
-                  src="/images/princess-beauty.jpg"
-                  alt="Princess Beauty: kursusside med video, forløb og diplom"
-                  fill
+                  src="/images/princess-beauty-site.jpg"
+                  alt="Princess Beautys forside: webshop med hair extensions, kategorier, academy, booking og nyhedsbrev"
+                  width={1272}
+                  height={5607}
                   sizes="(max-width: 768px) 100vw, 620px"
-                  className="object-cover"
+                  className="h-auto w-full"
                 />
+                <div className="scroll-hint pointer-events-none sticky bottom-3 -mt-12 flex justify-center">
+                  <span className="rounded-full bg-navy/75 px-3.5 py-1.5 text-[11.5px] font-medium text-white backdrop-blur-sm">
+                    Rul i vinduet ↓
+                  </span>
+                </div>
               </div>
               <figcaption className="border-t border-line px-5 py-4 text-[13.5px] text-muted">
                 <span className="font-semibold text-navy">
-                  Princess Beauty · Aarhus
+                  Bag scenen: Princess Beauty · Aarhus
                 </span>{" "}
-                samler webshop, kurser og booking på én side
+                — webshop, kurser og booking på én side. Rul og kig, mens vi
+                bygger den
               </figcaption>
             </figure>
             <div className="flex flex-col gap-6 md:col-span-2">
