@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
@@ -102,6 +103,9 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollReveal />
+        {/* Cookiefri besøgstælling. Sætter ingen cookies og gemmer ingen
+            IP-adresser, så siden er stadig uden samtykkebanner — se /privatliv. */}
+        <Analytics />
       </body>
     </html>
   );

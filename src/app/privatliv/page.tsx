@@ -15,13 +15,14 @@ export default function PrivatlivPage() {
           Privatlivspolitik
         </h1>
         <p className="mt-3 text-[13.5px] text-faint">
-          Sidst opdateret: 3. juli 2026
+          Sidst opdateret: 22. juli 2026
         </p>
 
         <p className="mt-8 rounded-xl border border-line bg-mist px-6 py-5 text-[15px] leading-[1.65] text-ink">
           Den korte version: vi indsamler så lidt som muligt. Denne side
-          bruger ingen cookies, ingen analyseværktøjer og ingen sporing. Vi
-          behandler kun de oplysninger, du selv giver os.
+          sætter ingen cookies og følger dig ikke rundt på nettet. Vi tæller
+          besøg med et cookiefrit værktøj, og ellers behandler vi kun de
+          oplysninger, du selv giver os.
         </p>
 
         <section className="mt-10">
@@ -53,8 +54,12 @@ export default function PrivatlivPage() {
           <ul className="mt-3 space-y-3 text-[15px] leading-[1.65] text-muted">
             <li>
               <span className="font-semibold text-ink">Besøg på siden:</span>{" "}
-              ingenting. Siden sætter ingen cookies og bruger hverken
-              statistik, annoncering eller sporing.
+              vi tæller, hvor mange der besøger siden, og hvilke sider de
+              kigger på. Det sker med Vercel Web Analytics, som hverken sætter
+              cookies, gemmer din IP-adresse eller følger dig videre til andre
+              hjemmesider. Vi kan se, at der har været et besøg — ikke hvem du
+              er. Vercel behandler oplysningerne på vores vegne. Vi bruger
+              ingen annoncering og ingen sporing på tværs af nettet.
             </li>
             <li>
               <span className="font-semibold text-ink">
